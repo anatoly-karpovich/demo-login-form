@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+  <div class="loginForm">
+    <h2>Login</h2>
+    <form>
+      <div class="inputbox">
+        <input id="userName" type="text" maxlength="40"/>
+        <label>Username</label>
+      </div>
+      <div class="inputbox">
+        <input id="password" type="password" />
+        <label>Password</label>
+      </div>
+      <input class="button" id="submit" type="submit" value="Submit" />
+      <h4 id="errorMessage"></h4>
+    </form>
+  </div>
+  <div class="successMessage">
+    <h4 id="successMessage">Logged in!</h4>
+    <input class="button" id="backButton" value="Back to login page" type="submit"></input>
+  </div>
+</body>
+
+</html>
