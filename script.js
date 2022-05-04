@@ -17,12 +17,6 @@ const userNameOnRegister = document.querySelector("#userNameOnRegister")
 const passwordOnRegister = document.querySelector("#passwordOnRegister")
 const register = document.querySelector("#register")
 
-
-const credentials = {
-    username: 'hiqo',
-    password: 'hiqo'
-}
-
 submit.addEventListener('click', function(event) {
     let user = JSON.parse(localStorage.getItem(userName.value));
     if(!(userName.value).trim() && !(password.value).trim()) {
@@ -37,7 +31,7 @@ submit.addEventListener('click', function(event) {
         userName.value = ''
         password.value = ''
         success.textContent = `Hello, ${user.name}!`
-    } else if(userName.value != credentials.username || password.value != credentials.password) {
+    } else {
         error.textContent = 'Invalid credentials'
     }
     event.preventDefault(); 
@@ -89,6 +83,10 @@ passwordOnRegister.addEventListener('input', () => {
     errorOnRegister.textContent=''
 })
 
+passwordOnRegister.addEventListener('input', (event) => {
+
+})
+
 function usernameValidate(value) {
     value = value.trim()
     // console.log((JSON.parse(localStorage.getItem(userNameOnRegister.value))))
@@ -103,9 +101,8 @@ function usernameValidate(value) {
     } else return 'valid'
 }
 
-function passwordValidate(value) {
-    value = value.trim()
-    if(!value) {
+function passwordValidate(value) {    
+    if(!value.trim()) {
         return "Password is required"
     } else if(value.length < 8) {
         return "Password should contain at least 8 characters"
