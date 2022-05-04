@@ -88,8 +88,12 @@ passwordOnRegister.addEventListener('input', (event) => {
 })
 
 function usernameValidate(value) {
+    if ((value.trim()).length != value.length) {
+        return 'Prefix and postfix spaces are not allowed is username'
+    }
     value = value.trim()
     // console.log((JSON.parse(localStorage.getItem(userNameOnRegister.value))))
+    // console.log(value)
     if(!value) {
         return "Username is required"
     } else if(value.length < 3) {
@@ -117,7 +121,7 @@ function passwordValidate(value) {
 
 register.addEventListener('click', (event) => {
     event.preventDefault()
-    console.log(userNameOnRegister.value)
+    
     if(usernameValidate(userNameOnRegister.value) != 'valid' && passwordValidate(passwordOnRegister.value) != 'valid') {
         errorOnRegister.textContent = 'Please, provide valid data'
     } else if(usernameValidate(userNameOnRegister.value) != 'valid') {
