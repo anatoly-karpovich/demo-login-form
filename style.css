@@ -87,6 +87,11 @@ h4 {
   display: none;
   text-align: center;
   margin-top: 20%;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
+#backButton {
+  width: 200px;
 }
 
 .buttonWrapper{

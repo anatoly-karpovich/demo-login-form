@@ -37,6 +37,7 @@ submit.addEventListener('click', function(event) {
         successForm.style.display = 'block'
         userName.value = ''
         password.value = ''
+        success.textContent = `Hello, ${user.name}!`
     } else if(userName.value != credentials.username || password.value != credentials.password) {
         error.textContent = 'Invalid credentials'
     }
