@@ -25,7 +25,6 @@ const credentials = {
 
 submit.addEventListener('click', function(event) {
     let user = JSON.parse(localStorage.getItem(userName.value));
-    console.log(user)
     if(!(userName.value).trim() && !(password.value).trim()) {
         error.textContent = 'Credentials are required'    
     } else if (!(userName.value).trim()) {
