@@ -16,15 +16,39 @@
     <h2>Login</h2>
     <form>
       <div class="inputbox">
-        <input id="userName" type="text" maxlength="40"/>
+        <input id="userName" type="text"/>
         <label>Username</label>
       </div>
       <div class="inputbox">
         <input id="password" type="password" />
         <label>Password</label>
       </div>
-      <input class="button" id="submit" type="submit" value="Submit" />
+      <div class = "buttonWrapper"> 
+        <input class="button" id="submit" type="submit" value="Submit" />
+        <span>OR</span>
+        <input class="button" id="registerOnLogin" value="Register" />
+      </div>
+     
       <h4 id="errorMessage"></h4>
+    </form>
+  </div>
+  <div class="registerForm">
+    <h2>Register</h2>
+    <form>
+      <div class="inputbox">
+        <input id="userNameOnRegister" type="text" maxlength="40"/>
+        <label>Username</label>
+      </div>
+      <div class="inputbox">
+        <input id="passwordOnRegister" type="password" maxlength="20"/>
+        <label>Password</label>
+      </div>
+      <div class = "buttonWrapper"> 
+        <input class="button" id="register" type="submit" value="Register" />        
+        <input class="button" id="backOnRegister" value="Back" />
+      </div>
+     
+      <h4 id="errorMessageOnRegister"></h4>
     </form>
   </div>
   <div class="successMessage">
