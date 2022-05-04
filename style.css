@@ -79,6 +79,8 @@ h4 {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+  margin: 0 20px;
+  width: 100%;
 }
 
 .successMessage {
@@ -89,7 +91,13 @@ h4 {
 
 .buttonWrapper{
   display: flex;
-  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+}
+
+.buttonWrapper span {
+  display: table-cell;
+  margin: auto;
 }
 
 .registerForm {
