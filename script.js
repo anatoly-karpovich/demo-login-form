@@ -93,8 +93,8 @@ function usernameValidate(value) {
     }
     value = value.trim()
     if(!value) {
-        return  
-    } else if(value.length < 3) {
+        return "Username is required"
+    } else if(value.length < 3) {       
         return "Username should contain at least 3 characters"
     } else if(value.length> 40) {
         return "Username can't exceed 40 characters"
