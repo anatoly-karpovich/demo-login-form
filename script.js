@@ -92,12 +92,10 @@ function usernameValidate(value) {
         return 'Prefix and postfix spaces are not allowed is username'
     }
     value = value.trim()
-    // console.log((JSON.parse(localStorage.getItem(userNameOnRegister.value))))
-    // console.log(value)
     if(!value) {
-        return "Username is required"
+        return  
     } else if(value.length < 3) {
-        return "Username can't contain at least 3 characters"
+        return "Username should contain at least 3 characters"
     } else if(value.length> 40) {
         return "Username can't exceed 40 characters"
     } else if(localStorage.getItem(userNameOnRegister.value) && (value == (JSON.parse(localStorage.getItem(userNameOnRegister.value))).name)) {
