@@ -110,9 +110,11 @@ function passwordValidate(value) {
         return "Password should contain at least 8 characters"
     } else if(value == value.toUpperCase()) {
         return "Password should contain at least one character in lower case"
-    } else if(value == value.toLowerCase()) {
-        return "Password should contain at least one character in upper case"
-    } else if(value.length > 20) {
+    } 
+    // else if(value == value.toLowerCase()) {
+    //     return "Password should contain at least one character in upper case"
+    // }
+     else if(value.length > 20) {
         return "Password can't exceed 20 characters"
     } else return 'valid'
 }
